@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Ingreso de Representantes</h2>
+    <form (ngSubmit)="addRepresentative()">
+      <div class="form-group">
+        <label for="firstName">Nombres:</label>
+        <input type="text" id="firstName" [(ngModel)]="rep.firstName" name="firstName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Apellidos:</label>
+        <input type="text" id="lastName" [(ngModel)]="rep.lastName" name="lastName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="relation">Relación:</label>
+        <input type="text" id="relation" [(ngModel)]="rep.relation" name="relation" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Teléfono:</label>
+        <input type="text" id="phone" [(ngModel)]="rep.phone" name="phone" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email (Opcional):</label>
+        <input type="email" id="email" [(ngModel)]="rep.email" name="email" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Agregar Representante</button>
+    </form>
+  </div>
+  

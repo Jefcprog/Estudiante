@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Ingreso de Calificaciones</h2>
+    <button class="btn btn-primary" (click)="openModal()">Agregar Calificación</button>
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th>Nombre de Tarea</th>
+          <th>Descripción de Tarea</th>
+          <th>Fecha de Inicio</th>
+          <th>Fecha Fin</th>
+          <th>Calificación</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let grade of grades">
+          <td>{{ grade.taskName }}</td>
+          <td>{{ grade.taskDescription }}</td>
+          <td>{{ grade.startDate | date }}</td>
+          <td>{{ grade.endDate | date }}</td>
+          <td>{{ grade.grade }}</td>
+          <td>{{ grade.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <app-modalcalificaciones 
+      [modalid]="'gradeModal'" 
+      [calificacion]="currentGrade" 
+      (eventoGuardar)="handleSave($event)">
+    </app-modalcalificaciones>
+  </div>
+  

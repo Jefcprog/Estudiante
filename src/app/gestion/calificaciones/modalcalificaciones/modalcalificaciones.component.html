@@ -1,0 +1,40 @@
+<div class="modal fade" id="{{modalid}}" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Agregar Calificación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="taskName" class="form-label">Nombre de Tarea:</label>
+              <input type="text" id="taskName" [(ngModel)]="calificacion.taskName" name="taskName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="taskDescription" class="form-label">Descripción de Tarea:</label>
+              <input type="text" id="taskDescription" [(ngModel)]="calificacion.taskDescription" name="taskDescription" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="startDate" class="form-label">Fecha de Inicio:</label>
+              <input type="date" id="startDate" [(ngModel)]="calificacion.startDate" name="startDate" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="endDate" class="form-label">Fecha Fin:</label>
+              <input type="date" id="endDate" [(ngModel)]="calificacion.endDate" name="endDate" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="grade" class="form-label">Calificación:</label>
+              <input type="number" id="grade" [(ngModel)]="calificacion.grade" name="grade" class="form-control" required>
+            </div>
+            <div id="divMensaje"></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="guardar()">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
